@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import {  Menu } from "lucide-react";
+import {  Menu, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -43,7 +43,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-10 text-sm font-medium">
+       <nav className="hidden lg:flex items-center gap-10 text-sm font-medium">
           {["SERVICES", "PROJECTS", "ABOUT US"].map((item) => (
             <Link
               key={item}
@@ -58,19 +58,23 @@ export function Navbar() {
             </Link>
           ))}
 
-          <Button
-            className={`rounded-lg px-6 transition-all duration-300 cursor-pointer ${
-              scrolled
-                ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
-                : "bg-[#8A7650] text-white hover:bg-[#66563a]"
-            }`}
-          >
-            GET A QUOTE
-          </Button>
+         <Button
+  className={`rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 ${
+    scrolled
+      ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
+      : "bg-[#8A7650] text-white hover:bg-[#66563a]"
+  }`}
+>
+  CONTACT US
+  <ArrowUpRight
+    size={18}
+    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  />
+</Button>
         </nav>
 
         {/* Mobile */}
-        <div className="md:hidden">
+       <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <button
@@ -86,9 +90,19 @@ export function Navbar() {
                 <Link href="/">SERVICES</Link>
                 <Link href="/">PROJECTS</Link>
                 <Link href="/">ABOUT US</Link>
-                <Button className=" bg-[#8A7650] text-[#ECE7D1] hover:bg-[#8E977D] rounded-full">
-                  GET A QUOTE
-                </Button>
+               <Button
+  className={`rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 ${
+    scrolled
+      ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
+      : "bg-[#8A7650] text-white hover:bg-[#66563a]"
+  }`}
+>
+  CONTACT US
+  <ArrowUpRight
+    size={18}
+    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  />
+</Button>
               </div>
             </SheetContent>
           </Sheet>

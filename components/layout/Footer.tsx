@@ -31,7 +31,7 @@ export function Footer() {
               href="mailto:hello@renova.studio"
               className="block text-xl sm:text-2xl md:text-3xl font-light hover:text-[#8E977D] transition-colors wrap-break-word"
             >
-              hello@renova.studio
+              hello@suvidha.enterprises
             </Link>
 
             <p className="text-[10px] sm:text-xs tracking-widest uppercase text-[#DBCEA5]/60 pt-6">
