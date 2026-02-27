@@ -1,18 +1,17 @@
-import { About } from '@/components/landing-page/About'
+import { About } from "@/components/landing-page/About";
 // import { BrandShowcase} from '@/components/landing-page/BrandShowcase'
-import { Hero } from '@/components/landing-page/Hero'
-import React from 'react'
+import { Hero } from "@/components/landing-page/Hero";
+import Services from "@/components/landing-page/Services";
+import React from "react";
 
 const Page = () => {
   return (
     <>
-     <Hero />
-       
-    <About />
-
+      <Hero />
+      <About />
+      <Services />
     </>
-   
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

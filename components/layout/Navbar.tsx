@@ -8,7 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Navbar() {
   const navLinks = [
-  { label: "SERVICES", href: "/services" },
+  { label: "SERVICES", href: "#services" },
   { label: "PROJECTS", href: "/projects" },
   { label: "ABOUT US", href: "/about" },
 ];
@@ -90,7 +90,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent className="bg-[#ECE7D1] border-l border-[#DBCEA5]">
               <div className="m-10 flex flex-col gap-6 text-lg font-medium text-[#8A7650]">
-                <Link href="/">SERVICES</Link>
+                <Link href="#services">SERVICES</Link>
                 <Link href="/">PROJECTS</Link>
                 <Link href="/">ABOUT US</Link>
                 <Link href="/contact-us">

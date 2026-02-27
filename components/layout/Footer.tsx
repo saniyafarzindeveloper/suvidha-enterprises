@@ -5,26 +5,20 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="relative bg-[#1A1814] text-[#ECE7D1] overflow-hidden">
-
       {/* Main Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32">
-
         <div className="flex flex-col gap-16 md:grid md:grid-cols-3 md:gap-12">
-
           {/* Left */}
           <div className="text-center md:text-left space-y-3 text-sm text-[#DBCEA5]/70">
-            <p>Studio 12, Clerkenwell</p>
-            <p>London, United Kingdom</p>
-
-            <p className="pt-6 uppercase tracking-widest text-xs text-[#8E977D]">
-              Interior
-            </p>
+            <p>Shop number 5, Lakhani Estate</p>
+            <p>Near new life hospital, L.B.S Marg,</p>
+            <p>Ghatkopar (W), Mumbai - 400086</p>
           </div>
 
           {/* Center */}
           <div className="text-center space-y-6">
             <p className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide">
-              +44 20 7946 0892
+              +91 98207 48592
             </p>
 
             <Link
@@ -33,24 +27,15 @@ export function Footer() {
             >
               hello@suvidha.enterprises
             </Link>
-
-            <p className="text-[10px] sm:text-xs tracking-widest uppercase text-[#DBCEA5]/60 pt-6">
-              Crafted Interior Spaces
-            </p>
           </div>
 
           {/* Right */}
           <div className="text-center md:text-right space-y-3 text-sm text-[#DBCEA5]/70">
-            <p className="uppercase tracking-widest text-xs text-[#8E977D]">
-              Architecture
-            </p>
-
             <div className="pt-6">
               <p>2026 Suvidha Enterprises.</p>
               <p>All rights reserved.</p>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -69,7 +54,6 @@ export function Footer() {
           SUVIDHA ENTERPRISES
         </h1>
       </div>
-
     </footer>
   );
 }
