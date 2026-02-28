@@ -10,49 +10,49 @@ const services = [
     title: "Imported Wallpapers",
     image: "/images/service-images/services1.jpg",
     description:
-      "Crafting warm, functional homes tailored to your lifestyle and aesthetic preferences.",
+      "Premium imported wallpapers curated to elevate residential and commercial interiors.",
   },
   {
     id: 2,
     title: "All Types of Blinds",
     image: "/images/service-images/services2.jpg",
     description:
-      "Transforming outdoor spaces into serene, elegant extensions of your architecture.",
+      "Custom blinds that balance light control, privacy, and aesthetic harmony.",
   },
   {
     id: 3,
     title: "Wooden Flooring",
     image: "/images/service-images/services3.jpg",
     description:
-      "Expert guidance on layout, materials, lighting, and spatial harmony.",
+      "Elegant wooden flooring solutions crafted for warmth and durability.",
   },
   {
     id: 4,
     title: "Suncontrol Film",
     image: "/images/service-images/services4.png",
     description:
-      "Designing functional and attractive interiors for offices and commercial spaces.",
+      "Advanced sun control films designed to reduce heat and enhance comfort.",
   },
   {
     id: 5,
     title: "Vinyl Flooring",
     image: "/images/service-images/services5.jpg",
     description:
-      "Reimagining spaces with structural precision and contemporary finishes.",
+      "Durable and stylish vinyl flooring solutions for modern interiors.",
   },
   {
     id: 6,
     title: "Decorative Film",
     image: "/images/service-images/services6.jpg",
     description:
-      "Accurate technical drawings and 3D visualizations for clarity before execution.",
+      "Decorative films that add privacy and elegance to glass surfaces.",
   },
   {
     id: 7,
     title: "All Interior Works",
     image: "/images/service-images/services7.jpg",
     description:
-      "Accurate technical drawings and 3D visualizations for clarity before execution.",
+      "Complete interior solutions delivered with precision and craftsmanship.",
   },
 ];
 
@@ -63,10 +63,21 @@ export default function Services() {
     <section className="bg-[#f7f4e8] py-28" id="services">
       <div className="mx-auto max-w-7xl px-6">
 
+        {/* SECTION HEADING */}
+        <div className="max-w-3xl mb-10">
+          <p className="uppercase tracking-[0.25em] text-xs text-[#8E977D]">
+            What We Offer
+          </p>
+
+          <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1E1E1E]">
+          Explore Our Wide Range of <span className="text-[#8A7650]">Services</span>
+          </h2>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-20 items-center">
 
           {/* LEFT — IMAGE PANEL */}
-          <div className="relative h-125 rounded-3xl overflow-hidden shadow-xl">
+          <div className="relative h-140 rounded-3xl overflow-hidden shadow-xl">
 
             <Image
               key={activeService.image}
@@ -95,7 +106,7 @@ export default function Services() {
                 <div
                   key={service.id}
                   onMouseEnter={() => setActiveService(service)}
-                  className={`group flex items-center justify-between py-4 border-b border-[#8A7650]/20 cursor-pointer transition-all duration-300`}
+                  className="group flex items-center justify-between py-4 border-b border-[#8A7650]/20 cursor-pointer transition-all duration-300"
                 >
                   <div className="flex items-center gap-6">
 

@@ -1,12 +1,12 @@
-import { BrandShowcase } from '@/components/landing-page/BrandShowcase'
+import ComingSoon from '@/components/layout/ComingSoon'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <>
-    <BrandShowcase />
+    <ComingSoon />
     </>
   )
 }
 
-export default page
+export default Page
