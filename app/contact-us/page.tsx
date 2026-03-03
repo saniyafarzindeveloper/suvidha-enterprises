@@ -18,7 +18,7 @@ export default function ContactPage() {
       {/* HERO SECTION */}
       <section className="relative h-100 flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/bg.jpg"
+          src="/images/gallery/galleria2.png"
           alt="Contact Hero"
           fill
           className="object-cover"
@@ -54,7 +54,7 @@ export default function ContactPage() {
         {/* Image */}
         <div className="relative w-full h-125 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
           <Image
-            src="/images/interior.jpg"
+            src="/images/gallery/galleria2.png"
             alt="Studio Interior"
             fill
             className="object-cover"

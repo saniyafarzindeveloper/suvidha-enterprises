@@ -1,12 +1,14 @@
 import AboutHero from "@/components/about/AboutHero"
-import { BrandShowcase } from "@/components/landing-page/BrandShowcase"
+import FounderDetail from "@/components/about/FounderDetail"
+
 
 
 const Page = () => {
   return (
     <>
     <AboutHero />
-    {/* <BrandShowcase /> */}
+    <FounderDetail />
+
     </>
   )
 }

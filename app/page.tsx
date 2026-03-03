@@ -3,7 +3,8 @@ import { About } from "@/components/landing-page/About";
 import { Hero } from "@/components/landing-page/Hero";
 import Services from "@/components/landing-page/Services";
 import VerticalShowcase from "@/components/landing-page/VerticalShowcase";
-import React from "react";
+import Galleria from "@/components/landing-page/Galleria"
+import CTA from "@/components/layout/CTA";
 
 const Page = () => {
   return (
@@ -11,7 +12,9 @@ const Page = () => {
       <Hero />
       <About />
       <Services />
-      <VerticalShowcase />
+      <Galleria />
+      {/* <CTA /> */}
+      {/* <VerticalShowcase /> */}
     </>
   );
 };

@@ -121,7 +121,7 @@ export function About() {
             className="relative h-[550px] w-full rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/interior.jpg"
+              src="/images/gallery/galleria8.png"
               alt="Interior Studio"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section className="relative h-screen w-full">
       <Image
-        src="/images/hero.jpg"
+        src="/images/gallery/galleria5.png"
         alt="Interior"
         fill
         priority
