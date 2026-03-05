@@ -1,10 +1,10 @@
-import ComingSoon from '@/components/layout/ComingSoon'
-import React from 'react'
+import ProjectsHero from "@/components/projects/ProjectsHero"
+
 
 const Page = () => {
   return (
     <>
-    <ComingSoon />
+   <ProjectsHero />
     </>
   )
 }
