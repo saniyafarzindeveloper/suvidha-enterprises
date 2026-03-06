@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -35,34 +35,61 @@ const stats = [
   },
 ];
 
-function Counter({ target }: { target: number }) {
+function Counter({ target, start }: { target: number; start: boolean }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
-    const duration = 1500;
-    const step = target / (duration / 16);
+    if (!start) return;
 
-    const interval = setInterval(() => {
-      start += step;
+    const duration = 3000;
+    let startTime: number | null = null;
 
-      if (start >= target) {
-        setCount(target);
-        clearInterval(interval);
-      } else {
-        setCount(Math.floor(start));
+    const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const easedProgress = easeOut(progress);
+
+      setCount(Math.floor(target * easedProgress));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
       }
-    }, 16);
+    };
 
-    return () => clearInterval(interval);
-  }, [target]);
+    requestAnimationFrame(animate);
+
+  }, [start, target]);
 
   return <span>{count}</span>;
 }
 
+
 export default function Stats() {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  /* Intersection Observer */
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="bg-[#f7f4e8] py-28">
+    <section ref={ref} className="bg-[#f7f4e8] py-22">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
@@ -85,26 +112,44 @@ export default function Stats() {
           </p>
         </div>
 
-        {/* GRID */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* STATS LEFT */}
+          {/* STATS */}
           <div className="grid grid-cols-2 gap-10">
 
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={
+                  visible
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 30 }
+                }
+                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <h3 className="text-4xl md:text-5xl font-bold text-[#1E1E1E]">
-                  <Counter target={stat.value} />
+                {/* NUMBER */}
+                <motion.h3
+                  initial={{ filter: "blur(10px)", opacity: 0 }}
+                  animate={
+                    visible
+                      ? { filter: "blur(0px)", opacity: 1 }
+                      : {}
+                  }
+                  transition={{ duration: 0.8 }}
+                  className="text-4xl md:text-5xl font-bold text-[#8a7650]"
+                >
+                  <Counter target={stat.value} start={visible} />
                   {stat.suffix}
-                </h3>
+                </motion.h3>
 
-                <div className="w-12 h-[2px] bg-[#8A7650] my-4"></div>
+                {/* GOLD LINE */}
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={visible ? { width: 48 } : {}}
+                 transition={{ duration: 1.6, delay: 0.4 }}
+                  className="h-0.5 bg-[#3c3323] my-4"
+                />
 
                 <h4 className="text-lg font-semibold text-[#1E1E1E]">
                   {stat.title}
@@ -118,12 +163,11 @@ export default function Stats() {
 
           </div>
 
-          {/* IMAGE RIGHT */}
+          {/* IMAGE */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: 80 }}
+            animate={visible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.9 }}
             className="relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden shadow-xl"
           >
             <Image

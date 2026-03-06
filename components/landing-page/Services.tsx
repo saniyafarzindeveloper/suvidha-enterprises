@@ -60,7 +60,7 @@ export default function Services() {
   const [activeService, setActiveService] = useState(services[0]);
 
   return (
-    <section className="bg-[#f7f4e8] py-28" id="services">
+    <section className="bg-[#f7f4e8] py-16" id="services">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* SECTION HEADING */}

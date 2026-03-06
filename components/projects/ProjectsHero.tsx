@@ -9,7 +9,7 @@ export default function ProjectsHero() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-[#131313] pt-38 pb-18 overflow-visible">
+      <section className="relative bg-[#131313] pt-38 pb-4 overflow-visible">
         {/* Background texture */}
         <div className="absolute inset-0 opacity-20">
           <Image
