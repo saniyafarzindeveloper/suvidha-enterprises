@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Hero() {
+export function ServicesHero() {
   return (
     <section className="relative h-screen w-full">
       <Image

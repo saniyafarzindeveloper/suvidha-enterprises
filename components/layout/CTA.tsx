@@ -3,7 +3,7 @@ import { Button } from "../ui/button"
 
 const CTA = () => {
   return (
-    <section className="bg-[#1E1E1E] text-white py-20">
+    <section className="bg-[#1E1E1E] text-white py-20 mt-10">
   <div className="max-w-5xl mx-auto px-6 text-center">
     <h2 className="text-4xl md:text-5xl font-bold leading-tight">
       Let’s Build Something
