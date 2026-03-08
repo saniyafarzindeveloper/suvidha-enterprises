@@ -11,6 +11,7 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import ContactUsForm from "@/components/contact-us/ContactUsForm";
 
 export default function ContactPage() {
   return (
@@ -81,92 +82,7 @@ export default function ContactPage() {
       </div>
 
             {/* RIGHT FORM CARD */}
-            <div className="bg-white/70 backdrop-blur-md border border-[#8d7039]/10 rounded-3xl p-10 shadow-xl">
-              <form className="space-y-8">
-
-                {/* Row 1 — Name + Contact */}
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-[#8A7650]">
-                      Full Name
-                    </label>
-                    <Input
-                      placeholder="Enter your name"
-                      className="h-12 border-[#DBCEA5] focus-visible:ring-[#8A7650]"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-[#8A7650]">
-                      Contact Number
-                    </label>
-                    <Input
-                      placeholder="Enter your contact number"
-                      className="h-12 border-[#DBCEA5] focus-visible:ring-[#8A7650]"
-                    />
-                  </div>
-                </div>
-
-                {/* Row 2 — Email + Reason */}
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-[#8A7650]">
-                      Email (Optional)
-                    </label>
-                    <Input
-                      placeholder="Enter your email"
-                      className="h-12 border-[#DBCEA5] focus-visible:ring-[#8A7650]"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-[#8A7650]">
-                      Reason to Reach Out
-                    </label>
-                    <Select>
-                      <SelectTrigger className="h-12 w-full border-[#DBCEA5] focus:ring-[#8A7650]">
-                        <SelectValue placeholder="Select a reason" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="residential">
-                          Residential Design
-                        </SelectItem>
-                        <SelectItem value="commercial">
-                          Commercial Project
-                        </SelectItem>
-                        <SelectItem value="consultation">
-                          Consultation
-                        </SelectItem>
-                        <SelectItem value="other">
-                          Other
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                {/* Row 3 — Message */}
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-[#8A7650]">
-                    Message
-                  </label>
-                  <Textarea
-                    rows={8}
-                    placeholder="Tell us about your project..."
-                    className="min-h-[220px] border-[#DBCEA5] focus-visible:ring-[#8A7650]"
-                  />
-                </div>
-
-                {/* Submit */}
-                <Button
-                  type="submit"
-                  className="w-full bg-[#8A7650] text-white hover:bg-[#6f5f40] rounded-xl py-6 cursor-pointer"
-                >
-                  SEND MESSAGE
-                </Button>
-
-              </form>
-            </div>
+            <ContactUsForm />
 
           </div>
 

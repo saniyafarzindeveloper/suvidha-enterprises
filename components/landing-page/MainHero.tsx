@@ -5,11 +5,15 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  "/images/gallery/galleria15.png",
-  "/images/gallery/galleria1.png",
-  "/images/gallery/galleria25.png",
-  "/images/gallery/galleria8.png",
+  "/images/gallery/galleria14.png",
+ 
+  "/images/gallery/galleria26.png",
+   "/images/gallery/galleria15.png",
+  "/images/gallery/galleria20.png",
+  
 ];
+
+//26, 14, 20
 
 export default function MainHero() {
   const [index, setIndex] = useState(0);
@@ -41,7 +45,6 @@ export default function MainHero() {
 
   return (
     <section className="relative h-[80vh] md:h-screen overflow-hidden">
-
       {/* Background images */}
       <AnimatePresence custom={direction}>
         <motion.div
@@ -69,9 +72,7 @@ export default function MainHero() {
 
       {/* content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
-
         <div className="max-w-3xl">
-
           {/* badge */}
           <div className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase border border-white/20 rounded-full px-4 py-2 text-white/80 mb-6">
             <span className="w-1.5 h-1.5 bg-[#C6A76A] rounded-full"></span>
@@ -80,31 +81,19 @@ export default function MainHero() {
 
           {/* heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-
-            Find Your{" "}
-            <span className="text-[#C6A76A]">
-              Inspired
-            </span>
-
+            Find Your <span className="text-[#C6A76A]">Inspired</span>
             <br />
-
-            <span className="text-[#C6A76A]">
-              Interior
-            </span>{" "}
-            Design
-
+            <span className="text-[#C6A76A]">Interior</span> Design
           </h1>
 
           {/* description */}
           <p className="mt-6 text-white/80 text-base md:text-lg max-w-xl leading-relaxed">
-            Transform your vision into reality with our innovative
-            designs, creating modern spaces that blend functionality,
-            aesthetics, and sustainability.
+            Transform your vision into reality with our innovative designs,
+            creating modern spaces that blend functionality, aesthetics, and
+            sustainability.
           </p>
-
         </div>
       </div>
-
     </section>
   );
 }
