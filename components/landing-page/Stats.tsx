@@ -6,28 +6,28 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    value: 23,
+    value: 19,
     suffix: "+",
     title: "Years Experience",
     description:
       "Improving homes with expert craftsmanship for years",
   },
   {
-    value: 190,
+    value: 110,
     suffix: "+",
     title: "Projects Completed",
     description:
       "Successful projects delivered with quality and care",
   },
   {
-    value: 260,
+    value: 6,
     suffix: "+",
     title: "Skilled Tradespeople",
     description:
       "Our expert team ensures exceptional project results",
   },
   {
-    value: 328,
+    value: 110,
     suffix: "+",
     title: "Client Satisfaction",
     description:

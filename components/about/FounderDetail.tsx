@@ -15,7 +15,7 @@ export default function FounderDetail() {
             <div className="lg:sticky lg:top-24">
               <div className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/dummyFounder.png"
+                  src="/vishal soni.png"
                   alt="Founder"
                   fill
                   className="object-cover"
@@ -72,7 +72,7 @@ export default function FounderDetail() {
                   Email
                 </p>
                 <p className="mt-2 text-xl font-semibold text-[#1E1E1E]">
-                  hello@suvidhaenterprises.com
+                suvidhaenterprises@ymail.com
                 </p>
               </div>
 

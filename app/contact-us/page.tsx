@@ -55,7 +55,7 @@ export default function ContactPage() {
 
                 <p>📞 +91 98207 48592 / +91 98198 52331</p>
 
-                <p>✉️ hello@suvidhaenterprises.com</p>
+                <p>✉️ suvidhaenterprises@ymail.com</p>
               </div>
             </div>
 

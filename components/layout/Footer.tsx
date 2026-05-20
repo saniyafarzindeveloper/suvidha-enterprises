@@ -23,9 +23,9 @@ export function Footer() {
 
             <Link
               href="mailto:hello@renova.studio"
-              className="block text-xl sm:text-2xl md:text-3xl font-light hover:text-[#8E977D] transition-colors wrap-break-word"
+              className="block text-xl sm:text-2xl md:text-2xl font-light hover:text-[#8E977D] transition-colors wrap-break-word"
             >
-              hello@suvidha.enterprises
+             suvidhaenterprises@ymail.com
             </Link>
           </div>
 

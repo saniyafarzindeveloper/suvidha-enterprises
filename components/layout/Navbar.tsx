@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, ArrowUpRight } from "lucide-react";
@@ -8,10 +8,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Navbar() {
   const navLinks = [
-  { label: "SERVICES", href: "/our-services" },
-  { label: "PROJECTS", href: "/projects" },
-  { label: "ABOUT US", href: "/about" },
-];
+    { label: "SERVICES", href: "/our-services" },
+    { label: "PROJECTS", href: "/projects" },
+    { label: "ABOUT US", href: "/about" },
+  ];
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,48 +33,59 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
+
         <Link
-          href="/"
-          className={`text-2xl font-semibold tracking-wide transition-colors duration-300 ${
-            scrolled ? "text-[#8A7650]" : "text-white"
-          }`}
-        >
-          SUVIDHA ENTERPRISES
-        </Link>
+  href="/"
+  className={`flex items-center gap-3 transition-colors duration-300 ${
+    scrolled ? "text-[#8A7650]" : "text-white"
+  }`}
+>
+  <Image
+    src="/suvidha-logo.png"
+    alt="Suvidha Enterprises Logo"
+    width={60}
+    height={60}
+    className="object-contain"
+  />
+
+  <span className="text-2xl font-semibold tracking-wide">
+    SUVIDHA ENTERPRISES
+  </span>
+</Link>
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center gap-10 text-sm font-medium">
-  {navLinks.map((item) => (
-    <Link
-      key={item.label}
-      href={item.href}
-      className={`transition-colors duration-300 ${
-        scrolled
-          ? "text-[#8A7650] hover:text-[#8E977D]"
-          : "text-white hover:text-[#DBCEA5]"
-      }`}
-    >
-      {item.label}
-    </Link>
-  ))}
+          {navLinks.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className={`transition-colors duration-300 ${
+                scrolled
+                  ? "text-[#8A7650] hover:text-[#8E977D]"
+                  : "text-white hover:text-[#DBCEA5]"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
 
-  <Button
-    className={`group rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 ${
-      scrolled
-        ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
-        : "bg-[#8A7650] text-white hover:bg-[#66563a]"
-    }`}
-    asChild
-  >
-    <Link href="/contact-us">
-      CONTACT US
-      <ArrowUpRight
-        size={18}
-        className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-      />
-    </Link>
-  </Button>
-</nav>
+          <Button
+            className={`group rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 ${
+              scrolled
+                ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
+                : "bg-[#8A7650] text-white hover:bg-[#66563a]"
+            }`}
+            asChild
+          >
+            <Link href="/contact-us">
+              CONTACT US
+              <ArrowUpRight
+                size={18}
+                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
+            </Link>
+          </Button>
+        </nav>
 
         {/* Mobile */}
         <div className="lg:hidden">
@@ -94,21 +105,20 @@ export function Navbar() {
                 <Link href="/projects">PROJECTS</Link>
                 <Link href="/about">ABOUT US</Link>
                 <Link href="/contact-us">
-                <Button
-                  className={`rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 ${
-                    scrolled
-                      ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
-                      : "bg-[#8A7650] text-white hover:bg-[#66563a]"
-                  }`}
-                >
-                  CONTACT US
-                  <ArrowUpRight
-                    size={18}
-                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                  />
-                </Button>
+                  <Button
+                    className={`rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 ${
+                      scrolled
+                        ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
+                        : "bg-[#8A7650] text-white hover:bg-[#66563a]"
+                    }`}
+                  >
+                    CONTACT US
+                    <ArrowUpRight
+                      size={18}
+                      className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                    />
+                  </Button>
                 </Link>
-                
               </div>
             </SheetContent>
           </Sheet>
