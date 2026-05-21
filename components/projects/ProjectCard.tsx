@@ -45,7 +45,6 @@ export default function ProjectsCard() {
   return (
     <section className="bg-[#f7f4e8] py-28">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Section Heading */}
         <div className="mb-16">
           <p className="text-sm tracking-[0.25em] text-[#8A7650] uppercase">
@@ -58,7 +57,6 @@ export default function ProjectsCard() {
 
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
           {projects.map((project, index) => (
             <div
               key={index}
@@ -75,11 +73,10 @@ export default function ProjectsCard() {
               </div>
 
               {/* GRADIENT OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
               {/* TEXT CONTENT */}
               <div className="absolute bottom-6 left-6 right-6 text-white">
-
                 <h3 className="text-xl font-semibold leading-tight">
                   {project.title}
                 </h3>
@@ -89,11 +86,9 @@ export default function ProjectsCard() {
                   <span className="w-1 h-1 bg-[#8A7650] rounded-full"></span>
                   <span>{project.year}</span>
                 </div>
-
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>

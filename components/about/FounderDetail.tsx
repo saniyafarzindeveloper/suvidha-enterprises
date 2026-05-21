@@ -35,7 +35,7 @@ export default function FounderDetail() {
               </h2>
 
               <p className="mt-3 text-[#8A7650] uppercase tracking-widest text-sm">
-                Co-Founder & CEO
+                Founder & CEO
               </p>
 
               <p className="mt-8 text-[#8A7650]/80 leading-relaxed">
@@ -49,21 +49,14 @@ export default function FounderDetail() {
             {/* DETAILS */}
             <div className="space-y-8">
 
-              <div>
-                <p className="text-sm text-[#8A7650]/60 uppercase tracking-widest">
-                  Responsibility
-                </p>
-                <p className="mt-2 text-xl font-semibold text-[#1E1E1E]">
-                  Head of the Company
-                </p>
-              </div>
+           
 
               <div>
                 <p className="text-sm text-[#8A7650]/60 uppercase tracking-widest">
                   Experience
                 </p>
                 <p className="mt-2 text-xl font-semibold text-[#1E1E1E]">
-                  23 Years
+                  18+ Years
                 </p>
               </div>
 
@@ -90,13 +83,9 @@ export default function FounderDetail() {
             {/* EDUCATION */}
             <div>
               <h3 className="text-3xl font-bold text-[#1E1E1E]">
-                Educational Qualification
+                Area of Expertise
               </h3>
 
-              <p className="mt-6 text-[#8A7650]/80 leading-relaxed">
-                Our team brings unparalleled creativity and technical
-                proficiency to the world of interior design.
-              </p>
 
               <ul className="mt-8 space-y-4">
                 {[
