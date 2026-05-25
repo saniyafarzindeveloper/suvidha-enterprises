@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { VisuallyHidden } from "radix-ui";
 
 const projects = [
   {
@@ -19,6 +18,8 @@ const projects = [
       "/images/projects/72-parksyde/5.jpeg",
       "/images/projects/72-parksyde/1.jpeg",
       "/images/projects/72-parksyde/2.jpeg",
+      "/images/projects/72-parksyde/7.jpeg",
+      "/images/projects/72-parksyde/8.jpeg",
     ],
   },
 
@@ -89,71 +90,70 @@ const projects = [
     id: "07",
     title: "Wadhwa Anmol",
     category: "Residential",
-    cover: "/images/gallery/galleria26.png",
+    cover: "/images/projects/wadhwa-anmol/1.jpeg",
     images: [
-      "/images/gallery/galleria26.png",
-      "/images/gallery/galleria4.png",
-      "/images/gallery/galleria7.png",
+      "/images/projects/wadhwa-anmol/2.jpeg",
+      "/images/projects/wadhwa-anmol/3.jpeg",
+      "/images/projects/wadhwa-anmol/4.jpeg",
+      "/images/projects/wadhwa-anmol/5.jpeg",
+      "/images/projects/wadhwa-anmol/6.jpeg",
+      "/images/projects/wadhwa-anmol/7.jpeg",
     ],
   },
 
   {
     id: "08",
-    title: "3BHK Lobby Kalpataru",
+    title: "Sandu Sanskar",
     category: "Luxury Interior",
-    cover: "/images/gallery/galleria15.png",
+    cover: "/images/projects/sandu-sanskar/1.jpeg",
     images: [
-      "/images/gallery/galleria15.png",
-      "/images/gallery/galleria24.png",
-      "/images/gallery/galleria25.png",
+      "/images/projects/sandu-sanskar/2.jpeg",
+      "/images/projects/sandu-sanskar/3.jpeg",
+      "/images/projects/sandu-sanskar/4.jpeg",
+      "/images/projects/sandu-sanskar/5.jpeg",
+      "/images/projects/sandu-sanskar/6.jpeg",
+      "/images/projects/sandu-sanskar/7.jpeg",
+      "/images/projects/sandu-sanskar/8.jpeg",
+      "/images/projects/sandu-sanskar/9.jpeg",
     ],
   },
 
   {
     id: "09",
-    title: "2BHK Sandu Sanskar",
+    title: "Prince Tower Terrace",
     category: "Residential",
-    cover: "/images/gallery/galleria24.png",
+    cover: "/images/projects/prince-tower/3.jpeg",
     images: [
-      "/images/gallery/galleria24.png",
-      "/images/gallery/galleria10.png",
-      "/images/gallery/galleria11.png",
+      "/images/projects/prince-tower/1.jpeg",
+      "/images/projects/prince-tower/2.jpeg",
+      "/images/projects/prince-tower/4.jpeg",
+      "/images/projects/prince-tower/5.jpeg",
+      "/images/projects/prince-tower/6.jpeg",
+      "/images/projects/prince-tower/7.jpeg",
     ],
   },
 
   {
     id: "10",
-    title: "2BHK Kabra Samriddhi Garden",
+    title: "Wadhwa Wise City",
     category: "Residential",
-    cover: "/images/gallery/galleria7.png",
+    cover: "/images/projects/wadhwa-wise-city/2.jpeg",
     images: [
-      "/images/gallery/galleria7.png",
-      "/images/gallery/galleria4.png",
-      "/images/gallery/galleria18.png",
+      "/images/projects/wadhwa-wise-city/1.jpeg",
+      "/images/projects/wadhwa-wise-city/4.jpeg",
+      "/images/projects/wadhwa-wise-city/3.jpeg",
     ],
   },
 
   {
     id: "11",
-    title: "Wadhwa Wise City Panvel",
+    title: "Anmol Apartments",
     category: "Residential",
-    cover: "/images/gallery/galleria10.png",
+    cover: "/images/projects/anmol/4.jpeg",
     images: [
-      "/images/gallery/galleria10.png",
-      "/images/gallery/galleria11.png",
-      "/images/gallery/galleria21.png",
-    ],
-  },
-
-  {
-    id: "12",
-    title: "Transindia Prince Tower Terrace",
-    category: "Terrace Design",
-    cover: "/images/gallery/galleria4.png",
-    images: [
-      "/images/gallery/galleria4.png",
-      "/images/gallery/galleria3.png",
-      "/images/gallery/galleria26.png",
+      "/images/projects/anmol/1.jpeg",
+      "/images/projects/anmol/2.jpeg",
+      "/images/projects/anmol/3.jpeg",
     ],
   },
 ];
