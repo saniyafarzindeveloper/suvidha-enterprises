@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "../ui/button"
 
 
@@ -15,9 +16,11 @@ const CTA = () => {
     </p>
 
     <div className="mt-10">
+      <Link href="/contact-us">
       <Button className="bg-[#8A7650] hover:bg-[#6f5f40] transition-all duration-300 px-10 py-4 rounded-xl cursor-pointer font-semibold">
         GET IN TOUCH
       </Button>
+      </Link>
     </div>
   </div>
 </section>

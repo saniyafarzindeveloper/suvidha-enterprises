@@ -70,7 +70,7 @@ ${data.message}
 
     const encoded = encodeURIComponent(text);
 
-    const whatsappURL = `https://wa.me/919004434268?text=${encoded}`;
+    const whatsappURL = `https://wa.me/919819852331?text=${encoded}`;
 
     setTimeout(() => {
       window.open(whatsappURL, "_blank");
@@ -154,7 +154,7 @@ ${data.message}
               control={form.control}
               name="reason"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="w-full">
                   <FormLabel className="text-[#8A7650]">Project Type</FormLabel>
 
                   <Select
@@ -162,7 +162,7 @@ ${data.message}
                     defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger className="h-12 border-[#DBCEA5] focus:ring-[#8A7650]">
+                      <SelectTrigger className="h-12 w-full border-[#DBCEA5] focus:ring-[#8A7650] w-full">
                         <SelectValue placeholder="Select project type" />
                       </SelectTrigger>
                     </FormControl>
@@ -200,14 +200,18 @@ ${data.message}
             control={form.control}
             name="message"
             render={({ field }) => (
-              <FormItem>
+              <FormItem className="h-full">
                 <FormLabel className="text-[#8A7650]">Message</FormLabel>
                 <FormControl>
                   <Textarea
                     rows={10}
                     placeholder="Tell us about your project..."
                     {...field}
-                    className="border-[#DBCEA5]"
+                    className="
+  min-h-35
+  resize-none
+  border-[#DBCEA5]
+"
                   />
                 </FormControl>
                 <FormMessage />

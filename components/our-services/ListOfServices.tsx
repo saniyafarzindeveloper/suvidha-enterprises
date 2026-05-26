@@ -8,13 +8,13 @@ const services = [
     id: "01",
     title: "Residential Interior Design",
     desc: "Tailored design services for private homes, including room makeovers and complete home transformations.",
-    img: "/images/gallery/galleria4.png",
+    img: "/images/projects/wadhwa-wise-city/4.jpeg",
   },
   {
     id: "02",
     title: "Commercial Interior Design",
     desc: "Designing functional and attractive interiors for businesses including offices, retail spaces and hospitality venues.",
-    img: "/images/gallery/galleria18.png",
+    img: "/images/projects/hdfc-bank/3.jpeg",
   },
   {
     id: "03",

@@ -18,7 +18,7 @@ export function Footer() {
           {/* Center */}
           <div className="text-center space-y-6">
             <p className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide">
-              +91 98207 48592
+             +91 98198 52331
             </p>
 
             <Link

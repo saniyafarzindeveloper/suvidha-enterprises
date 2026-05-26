@@ -39,7 +39,7 @@ export default function FounderDetail() {
               </p>
 
               <p className="mt-8 text-[#8A7650]/80 leading-relaxed">
-                Mark Jackson brings over two decades of expertise in
+                Vishal Soni brings over 18 years of expertise in
                 architectural design and interior transformation.
                 His philosophy blends precision, creativity, and functional
                 elegance.

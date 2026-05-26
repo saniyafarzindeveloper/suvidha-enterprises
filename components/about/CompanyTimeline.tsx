@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const timeline = [
   {
-    year: "2003",
+    year: "2007",
     title: "Company Founded",
     description:
       "Established with a vision to craft timeless interiors blending functionality and artistry.",
@@ -17,20 +17,20 @@ const timeline = [
       "Successfully delivered large-scale commercial interiors across Mumbai.",
   },
   {
-    year: "2013",
+    year: "2015",
     title: "Expansion & Growth",
     description:
       "Expanded into luxury residential interiors and turnkey solutions.",
   },
   {
-    year: "2018",
-    title: "200+ Projects Milestone",
+    year: "2020",
+    title: "100+ Projects Milestone",
     description:
-      "Achieved a major milestone of delivering over 200 successful projects.",
+      "Achieved a major milestone of delivering over 100+ successful projects.",
   },
   {
-    year: "2023",
-    title: "20+ Years of Excellence",
+    year: "2025",
+    title: "19+ Years of Excellence",
     description:
       "Celebrating two decades of craftsmanship, innovation, and client trust.",
   },
@@ -63,7 +63,7 @@ export default function CompanyTimeline() {
             Our Journey
           </p>
           <h2 className="mt-6 text-4xl md:text-6xl font-bold text-[#1E1E1E]">
-            Since <span className="text-[#8A7650]">2003</span>
+            Since <span className="text-[#8A7650]">2007</span>
           </h2>
         </div>
 

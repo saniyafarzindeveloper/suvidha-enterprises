@@ -24,7 +24,7 @@ const galleryImages = [
   { id: 17, src: "/images/gallery/galleria17.png", size: "small" },
 ];
 
-export default function GallerySection() {
+export default function Galleria() {
   const [selected, setSelected] = useState<string | null>(null);
 
   // ESC close
