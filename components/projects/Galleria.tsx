@@ -37,7 +37,7 @@ export default function Galleria() {
   }, []);
 
   return (
-    <section className="bg-[#f7f4e8] mb-10">
+    <section className="bg-[#f7f4e8] pb-10">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-16">

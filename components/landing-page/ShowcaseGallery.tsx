@@ -38,7 +38,7 @@ export default function ShowcaseGallery() {
   const moveLeft = useTransform(scrollYProgress, [0, 1], ["12%", "-12%"]);
 
   return (
-    <section ref={ref} className="bg-[#f7f4e8] py-24 md:py-32 overflow-hidden">
+    <section ref={ref} className="bg-[#f7f4e8] py-16 md:py-24 overflow-hidden">
       <div className="space-y-10 md:space-y-12">
         {/* TOP ROW */}
         <motion.div

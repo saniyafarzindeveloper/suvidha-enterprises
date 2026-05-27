@@ -20,25 +20,25 @@ const services = [
     id: "03",
     title: "Interior Design Consultation",
     desc: "Providing professional advice on concepts, color schemes & material selection.",
-    img: "/images/gallery/galleria9.png",
+    img: "/images/service-images/services7.jpg",
   },
   {
     id: "04",
     title: "Outdoor & Landscape Design",
     desc: "Extending design services to outdoor spaces such as gardens, patios and decks.",
-    img: "/images/gallery/galleria21.png",
+    img: "/images/projects/prince-tower/2.jpeg",
   },
   {
     id: "05",
     title: "Renovation And Remodeling",
     desc: "Overhauling existing spaces to modernize and improve functionality and aesthetics.",
-    img: "/images/gallery/galleria26.png",
+    img: "/images/projects/kalpatru-lobby/1.jpeg",
   },
   {
     id: "06",
     title: "Interior 2D / 3D Layouts",
     desc: "Realistic 3D visualizations to help you envision your space before it's built.",
-    img: "/images/gallery/galleria11.png",
+    img: "/images/service-images/3D.jpeg",
   },
 ];
 

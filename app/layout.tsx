@@ -4,6 +4,7 @@ import "./globals.css"
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import CTA from "@/components/layout/CTA";
+import Testimonial from "@/components/layout/Testimonial";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,8 +34,11 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+       
+        <Testimonial />
         <CTA />
         <Footer />
+         
       </body>
     </html>
   );

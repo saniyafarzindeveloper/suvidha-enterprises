@@ -62,7 +62,7 @@ const projects = [
   {
     id: "05",
     title: "Kalpatru Aura",
-    category: "Commercial",
+    category: "Residential",
     cover: "/images/projects/kalpatru-aura/5.jpeg",
     images: [
       "/images/projects/kalpatru-aura/1.jpeg",
@@ -75,7 +75,7 @@ const projects = [
   {
     id: "06",
     title: "Kalpatru Aura Lobby",
-    category: "Residential",
+    category: "Residential amenity",
     cover: "/images/projects/kalpatru-lobby/1.jpeg",
     images: [
       "/images/projects/kalpatru-lobby/2.jpeg",
@@ -104,7 +104,7 @@ const projects = [
   {
     id: "08",
     title: "Sandu Sanskar",
-    category: "Luxury Interior",
+    category: "Residential",
     cover: "/images/projects/sandu/1.jpeg",
     images: [
       "/images/projects/sandu/2.jpeg",
@@ -117,7 +117,7 @@ const projects = [
   {
     id: "09",
     title: "Prince Tower Terrace",
-    category: "Residential",
+    category: "Residential amenity",
     cover: "/images/projects/prince-tower/3.jpeg",
     images: [
       "/images/projects/prince-tower/1.jpeg",
@@ -155,7 +155,7 @@ const projects = [
   {
     id: "12",
     title: "Ztekin",
-    category: "Residential",
+    category: "Residential amenity",
     cover: "/images/projects/zketin/1.jpeg",
     images: [
       "/images/projects/zketin/2.jpeg",
@@ -186,7 +186,7 @@ const projects = [
   {
     id: "15",
     title: "Empire Industries",
-    category: "Residential",
+    category: "industrial landscape",
     cover: "/images/projects/empire-industries/1.jpeg",
     images: [
      "/images/projects/empire-industries/2.jpeg",
@@ -197,7 +197,7 @@ const projects = [
   {
     id: "16",
     title: "Cutting Edge",
-    category: "Residential",
+    category: "Commercial",
     cover: "/images/projects/cutting-edge/1.jpeg",
     images: [
      "/images/projects/cutting-edge/2.jpeg",
@@ -208,7 +208,7 @@ const projects = [
   {
     id: "17",
     title: "Ami Polymer Pvt Ltd",
-    category: "Residential",
+    category: "Commercial",
     cover: "/images/projects/ami-polymer/1.jpeg",
     images: [
      "/images/projects/ami-polymer/2.jpeg",
