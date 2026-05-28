@@ -5,23 +5,23 @@ import { useState, useEffect } from "react";
 import { X, Plus } from "lucide-react";
 
 const galleryImages = [
-  { id: 1, src: "/images/gallery/galleria1.png", size: "large" },
-  { id: 2, src: "/images/gallery/galleria2.png", size: "small" },
-  { id: 3, src: "/images/gallery/galleria3.png", size: "small" },
-  { id: 4, src: "/images/gallery/galleria4.png", size: "small" },
-  { id: 5, src: "/images/gallery/galleria5.png", size: "wide" },
-  { id: 6, src: "/images/gallery/galleria6.png", size: "wide" },
-  { id: 7, src: "/images/gallery/galleria7.png", size: "small" },
-  { id: 8, src: "/images/gallery/galleria8.png", size: "small" },
-  { id: 9, src: "/images/gallery/galleria9.png", size: "small" },
-  { id: 10, src: "/images/gallery/galleria10.png", size: "small" },
-  { id: 11, src: "/images/gallery/galleria11.png", size: "small" },
-  { id: 12, src: "/images/gallery/galleria12.png", size: "wide" },
-  { id: 13, src: "/images/gallery/galleria13.png", size: "wide" },
-  { id: 14, src: "/images/gallery/galleria14.png", size: "small" },
-  { id: 15, src: "/images/gallery/galleria15.png", size: "large" },
-  { id: 16, src: "/images/gallery/galleria16.png", size: "small" },
-  { id: 17, src: "/images/gallery/galleria17.png", size: "small" },
+  { id: 1, src: "/images/projects/alag-ashtapad/4.jpeg", size: "large" },
+  { id: 2, src: "/images/projects/72-parksyde/2.jpeg", size: "small" },
+  { id: 3, src: "/images/projects/ranjitha-palace/2.jpeg", size: "small" },
+  { id: 4, src: "/images/projects/prince-tower/6.jpeg", size: "small" },
+  { id: 5, src: "/images/projects/route-86/5.jpeg", size: "wide" },
+  { id: 6, src: "/images/projects/hdfc-bank/3.jpeg", size: "wide" },
+  { id: 7, src: "/images/projects/72-parksyde/7.jpeg", size: "small" },
+  { id: 8, src: "/images/projects/72-parksyde/4.jpeg", size: "small" },
+  { id: 9, src: "/images/projects/207-sh/3.jpeg", size: "small" },
+  { id: 10, src: "/images/projects/kabra-samriddhi/6.jpeg", size: "small" },
+  { id: 11, src: "/images/projects/ami-polymer/4.jpeg", size: "small" },
+  { id: 12, src: "/images/projects/cutting-edge/3.jpeg", size: "wide" },
+  { id: 13, src: "/images/projects/route-86/2.jpeg", size: "wide" },
+  { id: 14, src: "/images/projects/empire-industries/4.jpeg" },
+  { id: 15, src: "/images/projects/kalpatru-lobby/1.jpeg", size: "large" },
+  { id: 16, src: "/images/projects/207-sh/5.jpeg", size: "small" },
+  { id: 17, src: "/images/projects/prince-tower/1.jpeg", size: "small" },
 ];
 
 export default function Galleria() {
@@ -90,7 +90,7 @@ export default function Galleria() {
         <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-6">
           <button
             onClick={() => setSelected(null)}
-            className="absolute top-8 right-8 text-white hover:text-[#8A7650] transition"
+            className="absolute top-8 right-8 text-white hover:text-[#8A7650] transition cursor-pointer"
           >
             <X size={32} />
           </button>

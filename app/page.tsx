@@ -5,6 +5,7 @@ import WorkingProcess from "@/components/landing-page/WorkingProcess";
 import MainHero from "@/components/landing-page/MainHero";
 import Galleria from "@/components/projects/Galleria";
 
+
 const Page = () => {
   return (
     <>

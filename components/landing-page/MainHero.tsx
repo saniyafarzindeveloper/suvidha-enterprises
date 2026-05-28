@@ -5,15 +5,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  "/images/gallery/galleria14.png",
- 
-  "/images/gallery/galleria26.png",
-   "/images/gallery/galleria15.png",
-  "/images/gallery/galleria20.png",
-  
+  "/images/projects/kalpatru-aura/1.jpeg",
+  "/images/projects/wadhwa-anmol/9.png",
+  "/images/projects/prince-tower/2.jpeg",
+  "/images/projects/ami-polymer/1.jpeg",
 ];
-
-//26, 14, 20
 
 export default function MainHero() {
   const [index, setIndex] = useState(0);
