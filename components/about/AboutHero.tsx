@@ -10,7 +10,7 @@ export default function Hero() {
 
       {/* Background Image */}
       <Image
-        src="/images/gallery/galleria14.png" // replace with your image
+        src="/images/projects/wadhwa-anmol/9.png"
         alt="Interior"
         fill
         priority

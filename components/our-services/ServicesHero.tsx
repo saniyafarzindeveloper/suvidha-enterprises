@@ -4,7 +4,7 @@ export function ServicesHero() {
   return (
     <section className="relative h-screen w-full">
       <Image
-        src="/images/gallery/galleria5.png"
+        src="/images/projects/72-parksyde/6.jpeg"
         alt="Interior"
         fill
         priority

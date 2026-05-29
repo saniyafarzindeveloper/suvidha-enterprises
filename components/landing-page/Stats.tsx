@@ -171,7 +171,7 @@ export default function Stats() {
             className="relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden shadow-xl"
           >
             <Image
-              src="/images/gallery/galleria24.png"
+              src="/images/projects/kalpatru-aura/5.jpeg"
               alt="Interior"
               fill
               className="object-cover"

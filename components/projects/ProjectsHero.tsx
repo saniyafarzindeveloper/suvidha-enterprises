@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import ProjectsCard from "./ProjectCard";
+import Link from "next/link";
 
 export default function ProjectsHero() {
   return (
@@ -13,7 +14,7 @@ export default function ProjectsHero() {
         {/* Background texture */}
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/gallery/galleria4.png"
+            src="/images/projects/prince-tower/2.jpeg"
             alt=""
             fill
             className="object-cover"
@@ -47,12 +48,14 @@ export default function ProjectsHero() {
                 we are always dedicated to bringing your vision to life.
               </p>
 
-              <button className="mt-8 inline-flex items-center gap-3 border border-white/20 px-6 py-3 rounded-full text-white hover:bg-[#8A7650] hover:border-[#8A7650] transition-all duration-300">
+              <Link href="/contact-us">
+              <button className="mt-8 cursor-pointer inline-flex items-center gap-3 border border-white/20 px-6 py-3 rounded-full text-white hover:bg-[#8A7650] hover:border-[#8A7650] transition-all duration-300">
                 Get Our Services
                 <span className="w-8 h-8 flex items-center justify-center bg-[#8A7650] rounded-full">
                   <ArrowUpRight size={16} />
                 </span>
               </button>
+              </Link>
             </motion.div>
           </div>
 
@@ -65,7 +68,7 @@ export default function ProjectsHero() {
           >
             <div className="relative h-[280px] md:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/gallery/galleria26.png"
+                src="/images/projects/prince-tower/2.jpeg"
                 alt="Interior"
                 fill
                 priority
