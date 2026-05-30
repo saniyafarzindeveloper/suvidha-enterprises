@@ -3,35 +3,32 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SectionBadge from "../layout/SectionBadge";
 
 const stats = [
   {
     value: 19,
     suffix: "+",
     title: "Years Experience",
-    description:
-      "Improving homes with expert craftsmanship for years",
+    description: "Improving homes with expert craftsmanship for years",
   },
   {
     value: 110,
     suffix: "+",
     title: "Projects Completed",
-    description:
-      "Successful projects delivered with quality and care",
+    description: "Successful projects delivered with quality and care",
   },
   {
     value: 6,
     suffix: "+",
     title: "Skilled Tradespeople",
-    description:
-      "Our expert team ensures exceptional project results",
+    description: "Our expert team ensures exceptional project results",
   },
   {
     value: 110,
     suffix: "+",
     title: "Client Satisfaction",
-    description:
-      "Our clients trust us for consistent quality and service",
+    description: "Our clients trust us for consistent quality and service",
   },
 ];
 
@@ -60,12 +57,10 @@ function Counter({ target, start }: { target: number; start: boolean }) {
     };
 
     requestAnimationFrame(animate);
-
   }, [start, target]);
 
   return <span>{count}</span>;
 }
-
 
 export default function Stats() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -80,7 +75,7 @@ export default function Stats() {
           observer.disconnect();
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -91,13 +86,14 @@ export default function Stats() {
   return (
     <section ref={ref} className="bg-[#f7f4e8] py-22">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Heading */}
         <div className="max-w-3xl mb-20">
-          <span className="inline-flex items-center gap-2 text-xs tracking-[0.25em] text-[#8A7650] uppercase">
-            <span className="w-1.5 h-1.5 bg-[#8A7650] rounded-full"></span>
-            Trusted Experience
-          </span>
+          <SectionBadge
+            text="over the years"
+            textColor="text-[#C6A76A]"
+            borderColor="border-[#C6A76A]"
+            dotColor="bg-[#C6A76A]"
+          />
 
           <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1E1E1E] leading-tight">
             Behind Every <span className="text-[#8A7650]">Statistic</span>
@@ -113,29 +109,19 @@ export default function Stats() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-
           {/* STATS */}
           <div className="grid grid-cols-2 gap-10">
-
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
-                animate={
-                  visible
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 30 }
-                }
+                animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 {/* NUMBER */}
                 <motion.h3
                   initial={{ filter: "blur(10px)", opacity: 0 }}
-                  animate={
-                    visible
-                      ? { filter: "blur(0px)", opacity: 1 }
-                      : {}
-                  }
+                  animate={visible ? { filter: "blur(0px)", opacity: 1 } : {}}
                   transition={{ duration: 0.8 }}
                   className="text-4xl md:text-5xl font-bold text-[#8a7650]"
                 >
@@ -147,7 +133,7 @@ export default function Stats() {
                 <motion.div
                   initial={{ width: 0 }}
                   animate={visible ? { width: 48 } : {}}
-                 transition={{ duration: 1.6, delay: 0.4 }}
+                  transition={{ duration: 1.6, delay: 0.4 }}
                   className="h-0.5 bg-[#3c3323] my-4"
                 />
 
@@ -160,7 +146,6 @@ export default function Stats() {
                 </p>
               </motion.div>
             ))}
-
           </div>
 
           {/* IMAGE */}
@@ -177,9 +162,7 @@ export default function Stats() {
               className="object-cover"
             />
           </motion.div>
-
         </div>
-
       </div>
     </section>
   );

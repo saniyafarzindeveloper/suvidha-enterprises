@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import SectionBadge from "../layout/SectionBadge";
 
 const services = [
   {
@@ -65,9 +66,12 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6">
         {/* SECTION HEADING */}
         <div className="max-w-3xl mb-14">
-          <p className="uppercase tracking-[0.25em] text-xs text-[#8E977D]">
-            What We Offer
-          </p>
+          <SectionBadge
+            text="what we offer"
+            textColor="text-[#C6A76A]"
+            borderColor="border-[#C6A76A]"
+            dotColor="bg-[#C6A76A]"
+          />
 
           <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1E1E1E]">
             Explore Our Wide Range of{" "}

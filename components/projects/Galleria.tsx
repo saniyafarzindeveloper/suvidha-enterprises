@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { X, Plus } from "lucide-react";
+import SectionBadge from "../layout/SectionBadge";
 
 const galleryImages = [
   { id: 1, src: "/images/projects/alag-ashtapad/4.jpeg", size: "large" },
@@ -41,9 +42,12 @@ export default function Galleria() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-16">
-          <p className="uppercase tracking-[0.25em] text-xs text-[#8E977D]">
-            Our Portfolio
-          </p>
+          <SectionBadge
+            text="our portfolio"
+            textColor="text-[#C6A76A]"
+            borderColor="border-[#C6A76A]"
+            dotColor="bg-[#C6A76A]"
+          />
           <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#1E1E1E]">
             A glance at our <span className="text-[#8A7650]">Projects</span>
           </h2>

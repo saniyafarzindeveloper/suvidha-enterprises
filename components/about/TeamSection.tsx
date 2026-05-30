@@ -1,6 +1,6 @@
-
 "use client";
 
+import SectionBadge from "../layout/SectionBadge";
 import { motion } from "framer-motion";
 
 const team = [
@@ -44,7 +44,6 @@ const team = [
 export default function TeamSection() {
   return (
     <section className="relative overflow-hidden bg-[#f7f4e8] py-28">
-
       {/* background typography */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
         <h1 className="text-[120px] md:text-[220px] font-bold text-black/[0.03] tracking-tight">
@@ -53,20 +52,21 @@ export default function TeamSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6">
-
         {/* badge */}
-        <div className="flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-[#8A7650] mb-6">
-          <span className="w-1.5 h-1.5 bg-[#8A7650] rounded-full"></span>
-          Our Team
+        <div className="flex items-center gap-2 mb-4">
+          <SectionBadge
+            text="our team"
+            textColor="text-[#C6A76A]"
+            borderColor="border-[#C6A76A]"
+            dotColor="bg-[#C6A76A]"
+          />
         </div>
 
         {/* heading */}
         <div className="max-w-4xl">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1E1E1E] leading-tight">
             The People Behind The{" "}
-            <span className="text-[#8A7650]">
-              Spaces We Create
-            </span>
+            <span className="text-[#8A7650]">Spaces We Create</span>
           </h2>
 
           <p className="mt-6 text-[#1E1E1E]/70 max-w-2xl leading-relaxed">
@@ -77,9 +77,7 @@ export default function TeamSection() {
 
         {/* grid */}
         <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
           {team.map((member, index) => (
-
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 40 }}
@@ -105,7 +103,6 @@ export default function TeamSection() {
                 hover:shadow-2xl
               "
             >
-
               {/* subtle glow */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[#8A7650]/5 to-transparent"></div>
 
@@ -133,7 +130,6 @@ export default function TeamSection() {
 
               {/* content */}
               <div className="relative mt-8">
-
                 <span className="text-xs uppercase tracking-[0.25em] text-[#8A7650]">
                   {member.role}
                 </span>
@@ -148,21 +144,16 @@ export default function TeamSection() {
                 <p className="mt-5 text-sm leading-relaxed text-[#1E1E1E]/70">
                   {member.description}
                 </p>
-
               </div>
 
               {/* decorative number */}
               <div className="absolute bottom-4 right-6 text-7xl font-bold text-black/[0.03]">
                 0{index + 1}
               </div>
-
             </motion.div>
-
           ))}
-
         </div>
       </div>
     </section>
   );
 }
-

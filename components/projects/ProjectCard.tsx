@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import SectionBadge from "../layout/SectionBadge";
 
 const projects = [
   {
@@ -189,9 +190,9 @@ const projects = [
     category: "industrial landscape",
     cover: "/images/projects/empire-industries/1.jpeg",
     images: [
-     "/images/projects/empire-industries/2.jpeg",
-     "/images/projects/empire-industries/3.jpeg",
-     "/images/projects/empire-industries/4.jpeg",
+      "/images/projects/empire-industries/2.jpeg",
+      "/images/projects/empire-industries/3.jpeg",
+      "/images/projects/empire-industries/4.jpeg",
     ],
   },
   {
@@ -200,9 +201,9 @@ const projects = [
     category: "Commercial",
     cover: "/images/projects/cutting-edge/1.jpeg",
     images: [
-     "/images/projects/cutting-edge/2.jpeg",
-     "/images/projects/cutting-edge/3.jpeg",
-     "/images/projects/cutting-edge/4.jpeg",
+      "/images/projects/cutting-edge/2.jpeg",
+      "/images/projects/cutting-edge/3.jpeg",
+      "/images/projects/cutting-edge/4.jpeg",
     ],
   },
   {
@@ -211,39 +212,39 @@ const projects = [
     category: "Commercial",
     cover: "/images/projects/ami-polymer/1.jpeg",
     images: [
-     "/images/projects/ami-polymer/2.jpeg",
-     "/images/projects/ami-polymer/7.jpeg",
-     "/images/projects/ami-polymer/3.jpeg",
-     "/images/projects/ami-polymer/5.jpeg",
-     "/images/projects/ami-polymer/7.jpeg",
-     "/images/projects/ami-polymer/6.jpeg",
+      "/images/projects/ami-polymer/2.jpeg",
+      "/images/projects/ami-polymer/7.jpeg",
+      "/images/projects/ami-polymer/3.jpeg",
+      "/images/projects/ami-polymer/5.jpeg",
+      "/images/projects/ami-polymer/7.jpeg",
+      "/images/projects/ami-polymer/6.jpeg",
     ],
   },
-   {
+  {
     id: "18",
     title: "207 SH",
     category: "Residential",
     cover: "/images/projects/207-sh/1.jpeg",
     images: [
-    "/images/projects/207-sh/2.jpeg",
-    "/images/projects/207-sh/3.jpeg",
-    "/images/projects/207-sh/4.jpeg",
-    "/images/projects/207-sh/6.jpeg",
-    "/images/projects/207-sh/5.jpeg",
+      "/images/projects/207-sh/2.jpeg",
+      "/images/projects/207-sh/3.jpeg",
+      "/images/projects/207-sh/4.jpeg",
+      "/images/projects/207-sh/6.jpeg",
+      "/images/projects/207-sh/5.jpeg",
     ],
   },
-   {
+  {
     id: "19",
     title: "Kabra Samriddhi",
     category: "Residential",
     cover: "/images/projects/kabra-samriddhi/1.jpeg",
     images: [
-   "/images/projects/kabra-samriddhi/2.jpeg",
-   "/images/projects/kabra-samriddhi/3.jpeg",
-   "/images/projects/kabra-samriddhi/5.jpeg",
-   "/images/projects/kabra-samriddhi/6.jpeg",
-   "/images/projects/kabra-samriddhi/7.jpeg",
-   "/images/projects/kabra-samriddhi/4.jpeg",
+      "/images/projects/kabra-samriddhi/2.jpeg",
+      "/images/projects/kabra-samriddhi/3.jpeg",
+      "/images/projects/kabra-samriddhi/5.jpeg",
+      "/images/projects/kabra-samriddhi/6.jpeg",
+      "/images/projects/kabra-samriddhi/7.jpeg",
+      "/images/projects/kabra-samriddhi/4.jpeg",
     ],
   },
 ];
@@ -258,9 +259,13 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* SECTION HEADING */}
         <div className="mb-20">
-          <div className="flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-[#8A7650]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#8A7650]" />
-            Our Work
+          <div className="flex items-center gap-2 mb-4">
+            <SectionBadge
+            text="our projects"
+            textColor="text-[#C6A76A]"
+            borderColor="border-[#C6A76A]"
+            dotColor="bg-[#C6A76A]"
+          />
           </div>
 
           <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1E1E1E] max-w-4xl">
@@ -471,11 +476,12 @@ function AutoProjectDialog({
         <div className="absolute top-6 left-6 z-20">
           <p
             className="
-              text-white/80
+        
               uppercase
               tracking-[0.35em]
               text-[10px]
               md:text-xs
+              text-[#DBCEA5]
             "
           >
             {project.category}
@@ -497,7 +503,7 @@ function AutoProjectDialog({
     rounded-full
     bg-black/30
     backdrop-blur-md
-
+    cursor-pointer
     flex
     items-center
     justify-center
@@ -522,21 +528,15 @@ function AutoProjectDialog({
             z-20
 
             p-6
-            md:p-10
+            md:p-4
           "
         >
           <h2
             className="
               text-white
-
-              text-4xl
-              sm:text-5xl
-              md:text-7xl
-
-              font-bold
-              leading-[0.92]
-              tracking-[-0.05em]
-
+              text-3xl
+              sm:text-2xl
+              md:text-3xl
               max-w-4xl
             "
           >

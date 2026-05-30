@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import SectionBadge from "../layout/SectionBadge";
 
 const timeline = [
   {
@@ -42,9 +43,7 @@ export default function CompanyTimeline() {
   // Auto slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) =>
-        prev === timeline.length - 1 ? 0 : prev + 1
-      );
+      setActiveIndex((prev) => (prev === timeline.length - 1 ? 0 : prev + 1));
     }, 4000);
 
     return () => clearInterval(interval);
@@ -53,15 +52,16 @@ export default function CompanyTimeline() {
   const activeItem = timeline[activeIndex];
 
   return (
-    <section className="bg-[#f7f4e8] py-28 overflow-hidden">
-
+    <section className="bg-[#f7f4e8] py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-[0.25em] text-xs text-[#8E977D]">
-            Our Journey
-          </p>
+        <div className="text-center mb-10">
+          <SectionBadge
+            text="our journey"
+            textColor="text-[#C6A76A]"
+            borderColor="border-[#C6A76A]"
+            dotColor="bg-[#C6A76A]"
+          />
           <h2 className="mt-6 text-4xl md:text-6xl font-bold text-[#1E1E1E]">
             Since <span className="text-[#8A7650]">2007</span>
           </h2>
@@ -102,7 +102,6 @@ export default function CompanyTimeline() {
 
         {/* Active Content */}
         <div className="relative min-h-[180px]">
-
           <AnimatePresence mode="wait">
             <motion.div
               key={activeItem.year}
@@ -121,9 +120,7 @@ export default function CompanyTimeline() {
               </p>
             </motion.div>
           </AnimatePresence>
-
         </div>
-
       </div>
     </section>
   );

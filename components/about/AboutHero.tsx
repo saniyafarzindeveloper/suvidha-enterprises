@@ -7,7 +7,6 @@ import { Button } from "../ui/button";
 export default function Hero() {
   return (
     <section className="relative h-screen overflow-hidden">
-
       {/* Background Image */}
       <Image
         src="/images/projects/wadhwa-anmol/9.png"
@@ -22,19 +21,6 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-
-        {/* Small Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-8"
-        >
-          <span className="text-xs tracking-[0.25em] uppercase text-white/80 border border-white/30 px-6 py-2 rounded-full backdrop-blur-sm">
-            Trusted Design Partner
-          </span>
-        </motion.div>
-
         {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -50,9 +36,7 @@ export default function Hero() {
         >
           Find Your Inspired
           <br />
-          <span className="text-white">
-            Interior Design
-          </span>
+          <span className="text-white">Interior Design</span>
         </motion.h1>
 
         {/* Description */}
@@ -69,8 +53,8 @@ export default function Hero() {
           "
         >
           Transform your vision into reality with our innovative designs,
-          creating modern spaces that blend functionality,
-          aesthetics, and sustainability.
+          creating modern spaces that blend functionality, aesthetics, and
+          sustainability.
         </motion.p>
 
         {/* Circular CTA */}
@@ -97,12 +81,11 @@ export default function Hero() {
               hover:border-[#8A7650]
             "
           >
-            Know 
+            Know
             <br />
             More
           </Button>
         </motion.div>
-
       </div>
     </section>
   );

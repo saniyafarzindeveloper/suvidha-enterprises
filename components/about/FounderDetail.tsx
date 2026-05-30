@@ -74,7 +74,7 @@ export default function FounderDetail() {
                   Contact
                 </p>
                 <p className="mt-2 text-xl font-semibold text-[#000000]">
-                  +91 98207 48592
+                 +91 98198 52331
                 </p>
               </div>
 

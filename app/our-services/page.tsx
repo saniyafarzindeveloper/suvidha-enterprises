@@ -1,5 +1,5 @@
 import ListOfServices from "@/components/our-services/ListOfServices"
-import { ServicesHero } from "@/components/our-services/ServicesHero"
+import ServicesHero  from "@/components/our-services/ServicesHero"
 
 
 

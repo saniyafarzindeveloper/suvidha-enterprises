@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import SectionBadge from "../layout/SectionBadge";
 
 const images = [
   "/images/projects/kalpatru-aura/1.jpeg",
@@ -69,11 +70,12 @@ export default function MainHero() {
       {/* content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
         <div className="max-w-3xl">
-          {/* badge */}
-          <div className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase border border-white/20 rounded-full px-4 py-2 text-white/80 mb-6">
-            <span className="w-1.5 h-1.5 bg-[#C6A76A] rounded-full"></span>
-            Trusted Design Partner
-          </div>
+          <SectionBadge
+            text="Trusted Design Partner"
+            textColor="text-white/80"
+            borderColor="border-white/20"
+            dotColor="bg-[#C6A76A]"
+          />
 
           {/* heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">

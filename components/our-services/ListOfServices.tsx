@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SectionBadge from "../layout/SectionBadge";
 
 const services = [
   {
@@ -43,31 +44,31 @@ const services = [
 ];
 
 export default function ServicesHorizontalScroll() {
-
   const duplicated = [...services, ...services];
 
   return (
     <section className="bg-[#f7f4e8] py-32 overflow-hidden relative">
-
       <div className="max-w-7xl mx-auto px-6 mb-16">
-
         {/* badge */}
-        <div className="flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-[#8A7650] mb-6">
-          <span className="w-1.5 h-1.5 bg-[#8A7650] rounded-full"></span>
-          Our Services
+        <div className="flex items-center gap-2 mb-4">
+          <SectionBadge
+            text="what we offer"
+            textColor="text-[#C6A76A]"
+            borderColor="border-[#C6A76A]"
+            dotColor="bg-[#C6A76A]"
+          />
         </div>
 
         {/* heading */}
         <h2 className="text-4xl md:text-5xl font-bold text-[#1E1E1E] max-w-4xl leading-tight">
-          Explore Our{" "}
-          <span className="text-[#8A7650]">Interior Design</span> Services
+          Explore Our <span className="text-[#8A7650]">Interior Design</span>{" "}
+          Services
         </h2>
-
       </div>
 
       {/* gradient fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#f7f4e8] to-transparent z-10 pointer-events-none"/>
-      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#f7f4e8] to-transparent z-10 pointer-events-none"/>
+      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#f7f4e8] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#f7f4e8] to-transparent z-10 pointer-events-none" />
 
       {/* scrolling track */}
       <motion.div
@@ -79,15 +80,12 @@ export default function ServicesHorizontalScroll() {
           repeat: Infinity,
         }}
       >
-
         {duplicated.map((service, index) => (
           <div
             key={index}
             className="group relative w-[320px] sm:w-[360px] md:w-[420px] flex-shrink-0"
           >
-
             <div className="relative h-[520px] rounded-3xl overflow-hidden shadow-xl">
-
               <Image
                 src={service.img}
                 alt={service.title}
@@ -96,7 +94,7 @@ export default function ServicesHorizontalScroll() {
               />
 
               {/* overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"/>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
               {/* large number */}
               <span className="absolute top-6 left-6 text-white text-4xl md:text-5xl font-bold tracking-wide">
@@ -105,7 +103,6 @@ export default function ServicesHorizontalScroll() {
 
               {/* text content */}
               <div className="absolute bottom-8 left-8 right-8 text-white">
-
                 <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
                   {service.title}
                 </h3>
@@ -113,16 +110,11 @@ export default function ServicesHorizontalScroll() {
                 <p className="mt-4 text-sm md:text-base text-white/80 leading-relaxed">
                   {service.desc}
                 </p>
-
               </div>
-
             </div>
-
           </div>
         ))}
-
       </motion.div>
-
     </section>
   );
 }

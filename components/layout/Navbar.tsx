@@ -1,84 +1,99 @@
 "use client";
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, ArrowUpRight } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Navbar() {
+  const pathname = usePathname();
+
   const navLinks = [
     { label: "SERVICES", href: "/our-services" },
     { label: "PROJECTS", href: "/projects" },
     { label: "ABOUT US", href: "/about" },
   ];
+
   const [scrolled, setScrolled] = useState(false);
+
+  const isServicesPage = pathname === "/our-services";
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  const navTextColor = isServicesPage
+    ? "text-[#8A7650]"
+    : scrolled
+    ? "text-[#8A7650]"
+    : "text-white";
+
+  const navHoverColor = isServicesPage
+    ? "hover:text-[#8E977D]"
+    : scrolled
+    ? "hover:text-[#8E977D]"
+    : "hover:text-[#DBCEA5]";
 
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
+        scrolled || isServicesPage
           ? "bg-[#ECE7D1]/95 backdrop-blur-md shadow-md border-b border-[#DBCEA5]"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        {/* Logo */}
-
+        {/* LOGO */}
         <Link
-  href="/"
-  className={`flex items-center gap-3 transition-colors duration-300 ${
-    scrolled ? "text-[#8A7650]" : "text-white"
-  }`}
->
-  <Image
-    src="/suvidha-logo.png"
-    alt="Suvidha Enterprises Logo"
-    width={60}
-    height={60}
-    className="object-contain"
-  />
+          href="/"
+          className={`flex items-center gap-3 transition-colors duration-300 ${navTextColor}`}
+        >
+          <Image
+            src="/suvidha-logo.png"
+            alt="Suvidha Enterprises Logo"
+            width={60}
+            height={60}
+            className="object-contain"
+          />
 
-  <span className="text-2xl font-semibold tracking-wide">
-    SUVIDHA ENTERPRISES
-  </span>
-</Link>
+          <span className="text-2xl font-semibold tracking-wide">
+            SUVIDHA ENTERPRISES
+          </span>
+        </Link>
 
-        {/* Desktop Menu */}
+        {/* DESKTOP NAVIGATION */}
         <nav className="hidden lg:flex items-center gap-10 text-sm font-medium">
           {navLinks.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className={`transition-colors duration-300 ${
-                scrolled
-                  ? "text-[#8A7650] hover:text-[#8E977D]"
-                  : "text-white hover:text-[#DBCEA5]"
-              }`}
+              className={`transition-colors duration-300 ${navTextColor} ${navHoverColor}`}
             >
               {item.label}
             </Link>
           ))}
 
           <Button
-            className={`group rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 ${
-              scrolled
-                ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
-                : "bg-[#8A7650] text-white hover:bg-[#66563a]"
-            }`}
+            className="group rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 bg-[#8A7650] text-white hover:bg-[#66563a]"
             asChild
           >
             <Link href="/contact-us">
               CONTACT US
+
               <ArrowUpRight
                 size={18}
                 className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
@@ -87,32 +102,29 @@ export function Navbar() {
           </Button>
         </nav>
 
-        {/* Mobile */}
+        {/* MOBILE MENU */}
         <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <button
-                className={`transition-colors ${
-                  scrolled ? "text-[#8A7650]" : "text-white"
-                }`}
+                className={`transition-colors duration-300 ${navTextColor}`}
               >
                 <Menu size={28} />
               </button>
             </SheetTrigger>
+
             <SheetContent className="bg-[#ECE7D1] border-l border-[#DBCEA5]">
               <div className="m-10 flex flex-col gap-6 text-lg font-medium text-[#8A7650]">
                 <Link href="/our-services">SERVICES</Link>
+
                 <Link href="/projects">PROJECTS</Link>
+
                 <Link href="/about">ABOUT US</Link>
+
                 <Link href="/contact-us">
-                  <Button
-                    className={`rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 ${
-                      scrolled
-                        ? "bg-[#8A7650] text-[#ECE7D1] hover:bg-[#66563a]"
-                        : "bg-[#8A7650] text-white hover:bg-[#66563a]"
-                    }`}
-                  >
+                  <Button className="rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 bg-[#8A7650] text-white hover:bg-[#66563a]">
                     CONTACT US
+
                     <ArrowUpRight
                       size={18}
                       className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
