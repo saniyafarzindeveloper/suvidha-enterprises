@@ -30,9 +30,9 @@ export default function ProjectsHero() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-                Find Your Inspired
+               We help you build  
                 <br />
-                <span className="text-[#8A7650]">Interior Design</span>
+                <span className="text-[#8A7650]">Your Dream Space</span>
               </h1>
             </motion.div>
 
