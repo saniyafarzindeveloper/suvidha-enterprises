@@ -29,16 +29,15 @@ export default function ServicesHero() {
             <h1 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-[-0.05em] text-[#1E1E1E]">
               Transforming
               <br />
-              Spaces,
-              <br />
-              Enhancing Homes.
+              Spaces
+              {/* <br />
+              Enhancing Homes. */}
             </h1>
 
             {/* Description */}
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#1E1E1E]/70">
-              From wallpapers and flooring to complete interior solutions,
-              we create refined environments that blend functionality,
-              comfort, and timeless design.
+             Suvidha Enterprises is a complete, turnkey interior solutions provider. From the first design concept to the final
+coat of paint, our in-house team of designers, architects, carpenters, and electricians handles every stage.
             </p>
 
             {/* CTA */}

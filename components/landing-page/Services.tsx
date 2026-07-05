@@ -12,35 +12,54 @@ const services = [
     title: "Residential Interior Design",
     image: "/images/projects/72-parksyde/6.jpeg",
     description:
-      "Custom blinds that balance light control, privacy, and aesthetic harmony.",
+      "End-to-end design and execution for homes and apartments, from single-room makeovers to full turnkey fit-outs.",
   },
   {
     id: 2,
     title: "Commercial Interior Design",
     image: "/images/projects/ami-polymer/1.jpeg",
     description:
-      "Elegant wooden flooring solutions crafted for warmth and durability.",
+      "Functional, on-brand interiors for offices, banks, retail, and hospitality spaces.",
   },
   {
     id: 3,
-    title: "Imported Wallpapers",
+    title: "Imported Wallpapers & Wall Finishes",
     image: "/images/projects/72-parksyde/8.jpeg",
     description:
       "Premium imported wallpapers curated to elevate residential and commercial interiors.",
   },
   {
     id: 4,
-    title: "Consultation",
+    title: "Interior Consultation, 2D/3D Visualization",
     image: "/images/service-images/services7.jpg",
     description:
-      "Advanced sun control films designed to reduce heat and enhance comfort.",
+      "Professional guidance on concepts, colour, and materials, with realistic 3D visuals before work begins.",
   },
   {
     id: 5,
-    title: "Modular Furniture & Space Planning",
+    title: "Modular Furniture & Carpentary",
     image: "/images/projects/wadhwa-anmol/5.jpeg",
     description:
-      "Durable and stylish vinyl flooring solutions for modern interiors.",
+      "Imported wallpapers, textures, and feature-wall finishes that add character to any room.",
+  },
+  {
+    id: 6,
+    title: "Renovation And Remodeling",
+    image: "/images/projects/kalpatru-lobby/1.jpeg",
+    description: "Reworking and modernising existing spaces to improve flow, function, and aesthetics.",
+  },
+  {
+    id: 7,
+    title: "Outdoor & Landscape Design",
+    image: "/images/projects/prince-tower/2.jpeg",
+    description: "Gardens, terraces, patios, and decks designed as considered extensions of your interiors.",
+    
+  },
+  {
+    id: 8,
+    title: "Complete Turnkey Execution",
+    description: "Full civil and finishing works handled in-house — masonry, tiling, flooring, false ceilings, and electrical.",
+    image: "/images/projects/anmol/3.jpeg",
   },
 ];
 
@@ -62,7 +81,7 @@ export default function Services() {
   }, [isHovered]);
 
   return (
-    <section className="bg-[#f7f4e8] py-16" id="services">
+    <section className="bg-[#f7f4e8] py-10" id="services">
       <div className="mx-auto max-w-7xl px-6">
         {/* SECTION HEADING */}
         <div className="max-w-3xl mb-14">
@@ -79,7 +98,7 @@ export default function Services() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-15 items-center">
           {/* LEFT IMAGE PANEL */}
           <div
             className="
@@ -228,8 +247,8 @@ export default function Services() {
                       {/* TITLE */}
                       <h3
                         className={`
-                          text-2xl
-                          md:text-3xl
+                          text-lg
+                          md:text-xl
                           font-semibold
                           transition-all
                           duration-300

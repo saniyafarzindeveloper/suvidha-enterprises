@@ -44,8 +44,8 @@ export default function ProjectsHero() {
               className="lg:pt-10"
             >
               <p className="text-white/70 leading-relaxed max-w-md">
-                Whether it&lsquo;s your home, office, or a commercial project,
-                we are always dedicated to bringing your vision to life.
+              A selection of homes, offices, and hospitality spaces we’ve designed and built across Mumbai and beyond each
+delivered end to end, with the same attention to detail.
               </p>
 
               <Link href="/contact-us">

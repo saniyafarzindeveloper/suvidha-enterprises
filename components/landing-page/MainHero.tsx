@@ -79,16 +79,16 @@ export default function MainHero() {
 
           {/* heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-            Find Your <span className="text-[#C6A76A]">Inspired</span>
+         Complete Interior Solutions, <span className="text-[#C6A76A]">Exclusively Yours</span>
             <br />
-            <span className="text-[#C6A76A]">Interior</span> Design
+            {/* <span className="text-[#C6A76A]">Exclusively</span> Design */}
           </h1>
 
           {/* description */}
           <p className="mt-6 text-white/80 text-base md:text-lg max-w-xl leading-relaxed">
-            Transform your vision into reality with our innovative designs,
-            creating modern spaces that blend functionality, aesthetics, and
-            sustainability.
+           For 18+ years, Suvidha Enterprises has designed and delivered complete interiors across Mumbai from concept
+and 3D design to civil work, carpentry, flooring, ceilings, electrical, and finishing. One accountable team. Every
+detail, perfected.
           </p>
         </div>
       </div>

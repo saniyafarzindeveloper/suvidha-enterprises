@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import CTA from "@/components/layout/CTA";
 import Testimonial from "@/components/layout/Testimonial";
+import FloatingActions from "@/components/layout/FloatingActions";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
+        <FloatingActions />
         {children}
        
         <Testimonial />

@@ -7,7 +7,7 @@ import SectionBadge from "../layout/SectionBadge";
 
 const stats = [
   {
-    value: 19,
+    value: 18,
     suffix: "+",
     title: "Years Experience",
     description: "Improving homes with expert craftsmanship for years",

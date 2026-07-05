@@ -34,7 +34,7 @@ export default function Hero() {
             max-w-6xl
           "
         >
-          Find Your Inspired
+         18+ Years of perfecting
           <br />
           <span className="text-white">Interior Design</span>
         </motion.h1>

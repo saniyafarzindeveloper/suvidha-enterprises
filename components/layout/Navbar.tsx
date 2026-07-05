@@ -63,16 +63,16 @@ export function Navbar() {
           className={`flex items-center gap-3 transition-colors duration-300 ${navTextColor}`}
         >
           <Image
-            src="/suvidha-logo.png"
+            src="/logo.svg"
             alt="Suvidha Enterprises Logo"
-            width={60}
-            height={60}
+            width={260}
+            height={260}
             className="object-contain"
           />
 
-          <span className="text-2xl font-semibold tracking-wide">
+          {/* <span className="text-2xl font-semibold tracking-wide">
             SUVIDHA ENTERPRISES
-          </span>
+          </span> */}
         </Link>
 
         {/* DESKTOP NAVIGATION */}

@@ -70,8 +70,8 @@ export default function TeamSection() {
           </h2>
 
           <p className="mt-6 text-[#1E1E1E]/70 max-w-2xl leading-relaxed">
-            A collective of designers, visionaries, and execution experts
-            dedicated to crafting timeless interiors with precision and care.
+           Beyond our core design team, Suvidha employs an in-house workforce of architects, electricians, carpenters, and
+site craftsmen the reason we deliver complete turnkey projects without outsourcing.
           </p>
         </div>
 

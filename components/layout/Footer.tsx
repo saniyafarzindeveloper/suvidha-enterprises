@@ -22,7 +22,7 @@ export function Footer() {
             </p>
 
             <Link
-              href="mailto:hello@renova.studio"
+              href="mailto:suvidhaenterprises@ymail.com"
               className="block text-xl sm:text-2xl md:text-2xl font-light hover:text-[#8E977D] transition-colors wrap-break-word"
             >
              suvidhaenterprises@ymail.com

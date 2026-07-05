@@ -104,46 +104,58 @@ export default function FounderDetail() {
               </ul>
             </div>
 
-            {/* PROFESSIONAL SKILLS */}
-            <div>
-              <h3 className="text-3xl font-bold text-[#1E1E1E]">
-                Professional Skills
-              </h3>
+           {/* LEADERSHIP & EXECUTION */}
+<div>
+  <h3 className="text-3xl font-bold text-[#1E1E1E]">
+    Leadership & Execution
+  </h3>
 
-              <p className="mt-6 text-[#8A7650]/80 leading-relaxed">
-                Strategic planning, execution management, and high-end
-                material selection form the foundation of our design
-                excellence.
-              </p>
+  <p className="mt-6 text-[#8A7650]/80 leading-relaxed max-w-xl">
+    Every project is personally guided from initial consultation to final
+    handover, ensuring thoughtful planning, seamless coordination, premium
+    material selection, and uncompromised execution quality.
+  </p>
 
-              <div className="mt-10 space-y-8">
+  <div className="mt-10 space-y-8">
+    {[
+      {
+        label: "Project Planning & Strategy",
+        percent: 100,
+      },
+      {
+        label: "Site Supervision & Execution",
+        percent: 98,
+      },
+      {
+        label: "Client Consultation",
+        percent: 96,
+      },
+      {
+        label: "Material Selection & Quality Control",
+        percent: 95,
+      },
+    ].map((item, index) => (
+      <div key={index}>
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-lg font-semibold text-[#1E1E1E]">
+            {item.label}
+          </span>
 
-                {[
-                  { label: "Specialized Design Areas", percent: 85 },
-                  { label: "Styles And Trends", percent: 95 },
-                  { label: "Design Principles", percent: 65 },
-                ].map((skill, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between">
-                      <span className="font-semibold text-[#1E1E1E]">
-                        {skill.label}
-                      </span>
-                      <span className="text-[#8A7650] font-semibold">
-                        {skill.percent}%
-                      </span>
-                    </div>
+          <span className="text-[#8A7650] font-semibold text-base">
+            {item.percent}%
+          </span>
+        </div>
 
-                    <div className="mt-3 h-[3px] bg-[#DBCEA5] rounded-full">
-                      <div
-                        className="h-full bg-[#8A7650] rounded-full"
-                        style={{ width: `${skill.percent}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-
-              </div>
-            </div>
+        <div className="relative h-[6px] rounded-full bg-[#DBCEA5]/60 overflow-hidden">
+          <div
+            className="absolute inset-y-0 left-0 rounded-full bg-[#8A7650] transition-all duration-700"
+            style={{ width: `${item.percent}%` }}
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
           </div>
 
