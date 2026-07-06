@@ -13,14 +13,24 @@ export function Navbar() {
   const pathname = usePathname();
 
   const navLinks = [
+    { label: "HOME", href: "/" },
     { label: "SERVICES", href: "/our-services" },
     { label: "PROJECTS", href: "/projects" },
     { label: "ABOUT US", href: "/about" },
+    { label: "CASE STUDIES", href: "/case-studies" },
+    
   ];
 
   const [scrolled, setScrolled] = useState(false);
 
-  const isServicesPage = pathname === "/our-services";
+  const lightNavbarPages = [
+  "/our-services",
+  "/case-studies",
+];
+
+const isLightNavbar = lightNavbarPages.includes(pathname);
+
+  // const isServicesPage = pathname === "/our-services";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,13 +46,13 @@ export function Navbar() {
     };
   }, []);
 
-  const navTextColor = isServicesPage
+  const navTextColor = isLightNavbar
     ? "text-[#8A7650]"
     : scrolled
     ? "text-[#8A7650]"
     : "text-white";
 
-  const navHoverColor = isServicesPage
+  const navHoverColor = isLightNavbar
     ? "hover:text-[#8E977D]"
     : scrolled
     ? "hover:text-[#8E977D]"
@@ -51,7 +61,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        scrolled || isServicesPage
+        scrolled || isLightNavbar
           ? "bg-[#ECE7D1]/95 backdrop-blur-md shadow-md border-b border-[#DBCEA5]"
           : "bg-transparent"
       }`}
@@ -115,11 +125,16 @@ export function Navbar() {
 
             <SheetContent className="bg-[#ECE7D1] border-l border-[#DBCEA5]">
               <div className="m-10 flex flex-col gap-6 text-lg font-medium text-[#8A7650]">
+
+                 <Link href="/">HOME</Link>
+
                 <Link href="/our-services">SERVICES</Link>
 
                 <Link href="/projects">PROJECTS</Link>
 
                 <Link href="/about">ABOUT US</Link>
+
+                 <Link href="/case-studies">CASE STUDIES</Link>
 
                 <Link href="/contact-us">
                   <Button className="rounded-lg px-6 transition-all duration-300 cursor-pointer flex items-center gap-2 bg-[#8A7650] text-white hover:bg-[#66563a]">

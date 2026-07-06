@@ -19,7 +19,7 @@ const stats = [
     description: "Successful projects delivered with quality and care",
   },
   {
-    value: 6,
+    value: 60,
     suffix: "+",
     title: "Skilled Tradespeople",
     description: "Our expert team ensures exceptional project results",
