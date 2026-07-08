@@ -59,7 +59,7 @@ export default function ServicesHorizontalScroll() {
   const duplicated = [...services, ...services];
 
   return (
-    <section className="bg-[#f7f4e8] py-32 overflow-hidden relative">
+    <section className="bg-[#f7f4e8] py-12 overflow-hidden relative" id="service-list">
       <div className="max-w-7xl mx-auto px-6 mb-16">
         {/* badge */}
         <div className="flex items-center gap-2 mb-4">

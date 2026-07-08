@@ -4,25 +4,24 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import SectionBadge from "../layout/SectionBadge";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ServicesHero() {
   return (
     <section className="relative overflow-hidden bg-[#f7f4e8] py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-10 items-center">
-
           {/* LEFT CONTENT */}
           <div>
-
             {/* Badge */}
             <div className="inline-flex items-center gap-2">
-             <SectionBadge
-            text="elevating spaces"
-            textColor="text-[#C6A76A]"
-            borderColor="border-[#C6A76A]"
-            dotColor="bg-[#C6A76A]"
-          />
+              <SectionBadge
+                text="elevating spaces"
+                textColor="text-[#C6A76A]"
+                borderColor="border-[#C6A76A]"
+                dotColor="bg-[#C6A76A]"
+              />
             </div>
 
             {/* Heading */}
@@ -36,44 +35,44 @@ export default function ServicesHero() {
 
             {/* Description */}
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#1E1E1E]/70">
-             Suvidha Enterprises is a complete, turnkey interior solutions provider. From the first design concept to the final
-coat of paint, our in-house team of designers, architects, carpenters, and electricians handles every stage.
+              Suvidha Enterprises is a complete, turnkey interior solutions
+              provider. From the first design concept to the final coat of
+              paint, our in-house team of designers, architects, carpenters, and
+              electricians handles every stage.
             </p>
 
             {/* CTA */}
-            <button
+            <Link href="#service-list">
+             <Button
               className="
-                mt-10
-                inline-flex
-                items-center
-                gap-3
-
-                rounded-full
-
-                bg-[#8A7650]
-                px-7
-                py-4
-
-                text-white
-
-                transition-all
-                duration-300
-
-                hover:bg-[#6f6144]
-              "
+    group
+    mt-10
+    inline-flex
+    items-center
+    gap-3
+    rounded-full
+    bg-[#8A7650]
+    px-7
+    py-6
+    text-white
+    transition-all
+    duration-300
+    hover:bg-[#6f6144]
+    cursor-pointer
+  "
             >
               Explore Services
-
               <ArrowUpRight
                 size={18}
-                className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
               />
-            </button>
+            </Button>
+            </Link>
+           
           </div>
 
           {/* RIGHT COLLAGE */}
           <div className="relative h-[650px] hidden lg:block">
-
             {/* MAIN IMAGE */}
             <motion.div
               animate={{
@@ -197,9 +196,7 @@ coat of paint, our in-house team of designers, architects, carpenters, and elect
 
           {/* MOBILE COLLAGE */}
           <div className="lg:hidden">
-
             <div className="grid grid-cols-2 gap-4">
-
               <div className="relative h-[320px] overflow-hidden rounded-[28px]">
                 <Image
                   src="/images/projects/72-parksyde/6.jpeg"
@@ -210,7 +207,6 @@ coat of paint, our in-house team of designers, architects, carpenters, and elect
               </div>
 
               <div className="space-y-4">
-
                 <div className="relative h-[150px] overflow-hidden rounded-[24px]">
                   <Image
                     src="/images/projects/72-parksyde/5.jpeg"
@@ -228,15 +224,10 @@ coat of paint, our in-house team of designers, architects, carpenters, and elect
                     className="object-cover"
                   />
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

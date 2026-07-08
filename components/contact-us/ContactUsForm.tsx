@@ -70,7 +70,7 @@ ${data.message}
 
     const encoded = encodeURIComponent(text);
 
-    const whatsappURL = `https://wa.me/919819852331?text=${encoded}`;
+    const whatsappURL = `https://wa.me/918419911555?text=${encoded}`;
 
     setTimeout(() => {
       window.open(whatsappURL, "_blank");

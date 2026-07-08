@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -64,6 +65,7 @@ export default function Hero() {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="mt-12"
         >
+          <Link href="#founder">
           <Button
             className="
               w-28 h-28 md:w-32 md:h-32
@@ -85,6 +87,8 @@ export default function Hero() {
             <br />
             More
           </Button>
+          </Link>
+          
         </motion.div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function FounderDetail() {
   return (
-    <section className="bg-[#f7f4e8] py-24">
+    <section className="bg-[#f7f4e8] py-24" id="founder">
       <div className="mx-auto max-w-7xl px-6">
 
         <div className="grid lg:grid-cols-2 gap-20">
@@ -74,7 +74,7 @@ export default function FounderDetail() {
                   Contact
                 </p>
                 <p className="mt-2 text-xl font-semibold text-[#000000]">
-                 +91 98198 52331
+                 +91 84199 11555
                 </p>
               </div>
 

@@ -53,7 +53,7 @@ export default function ContactPage() {
               <div className="mt-8 space-y-3 text-black font-medium">
                 <p>📍 Shop No. 5, Lakhani Estate, Near New Life Hospital, L.B.S. Marg, Ghatkopar (W), Mumbai – 400086</p>
 
-                <p>📞 +91 98198 52331</p>
+                <p>📞 +91 84199 11555</p>
 
                 <p>✉️ suvidhaenterprises@ymail.com</p>
               </div>
