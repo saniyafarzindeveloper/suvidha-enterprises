@@ -38,10 +38,19 @@ export default function ProcessHorizontal() {
           />
 
           {/* MOBILE TIMELINE */}
-          <motion.div
-            style={{ scaleY: lineScale }}
-            className="absolute md:hidden left-1/2 top-0 bottom-0 w-[2px] bg-[#8A7650]/40 -translate-x-1/2 origin-top"
-          />
+         <motion.div
+  style={{ scaleY: lineScale }}
+  className="
+    absolute
+    md:hidden
+    left-6
+    top-0
+    bottom-0
+    w-[2px]
+    bg-[#8A7650]/40
+    origin-top
+  "
+/>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
 
@@ -52,7 +61,12 @@ export default function ProcessHorizontal() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15 }}
                 viewport={{ once: true }}
-                className="relative text-center"
+               className="
+  relative
+  md:text-center
+  pl-16
+  md:pl-0
+"
               >
 
                 {/* step dot */}
@@ -61,16 +75,35 @@ export default function ProcessHorizontal() {
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.2 + i * 0.15 }}
                   viewport={{ once: true }}
-                  className="w-12 h-12 bg-[#8A7650] text-white rounded-full flex items-center justify-center mx-auto mb-6 z-10 shadow-lg"
+               className="
+  absolute
+  left-0
+  top-0
+
+  md:static
+  md:mx-auto
+
+  flex
+  h-12
+  w-12
+  items-center
+  justify-center
+
+  rounded-full
+  bg-[#8A7650]
+  text-white
+
+  shadow-lg
+"
                 >
                   {i + 1}
                 </motion.div>
 
-                <h3 className="text-lg font-semibold text-[#1E1E1E]">
+              <h3 className="text-lg font-semibold text-[#1E1E1E] text-left md:text-center">
                   {step.title}
                 </h3>
 
-                <p className="text-sm text-[#1E1E1E]/70 mt-2">
+              <p className="mt-2 text-left text-sm text-[#1E1E1E]/70 md:text-center">
                   {step.desc}
                 </p>
 

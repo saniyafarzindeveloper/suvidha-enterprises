@@ -1,7 +1,19 @@
 "use client";
 
+import type { Metadata } from "next";
 import Image from "next/image";
 import ContactUsForm from "@/components/contact-us/ContactUsForm";
+
+export const metadata: Metadata = {
+  title: "Contact Suvidha Enterprises | Interior Designers, Ghatkopar",
+
+  description:
+    "Get in touch with Suvidha Enterprises, Ghatkopar West, Mumbai. Call or WhatsApp +91 98198 52331 and share your project for a free consultation.",
+
+  alternates: {
+    canonical: "/contact-us",
+  },
+};
 
 export default function ContactPage() {
   return (
